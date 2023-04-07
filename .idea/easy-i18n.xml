@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectSettingsService">
+    <option name="localesDirectory" value="D:\dev-test\Internationalization\react-intl-test\src\locale" />
+    <option name="namespaceDelimiter" value="" />
+    <option name="defaultNamespace" value="" />
+    <option name="previewLocale" value="ko" />
+    <option name="nestedKeys" value="false" />
+  </component>
+</project>

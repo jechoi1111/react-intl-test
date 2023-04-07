@@ -1,23 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import {MyComponent} from "./MyComponent";
+import {IntlProvider} from 'react-intl';
+import locale_ko from './locale/ko.json'
+import locale_en from './locale/en.json'
+
+const messages = {
+    ko: locale_ko,
+    en: locale_en,
+}
+
+const timeZones = {
+    ko: 'Asia/Seoul',
+    en: 'America/New_York',
+    eu: 'Europe/London'
+}
+
+const locales = {
+    ko: 'ko-KR',
+    en: 'en-US'
+}
 
 function App() {
+    const key = 'en';
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <IntlProvider locale={locales[key]} messages={messages[key]} timeZone={timeZones[key]}>
+            <MyComponent />
+        </IntlProvider>
     </div>
   );
 }
